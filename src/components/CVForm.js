@@ -1,0 +1,52 @@
+import React from "react";
+import JobsForm from "./JobsForm";
+import InfoForm from "./InfoForm";
+import EducationForm from "./EducationForm";
+class CVForm extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      name: "",
+      email: "",
+      educations: [],
+      jobs: [],
+    };
+
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+  }
+  handleNameChange(e) {
+    this.setState({
+      name: e.target.value,
+    });
+  }
+  handleEmailChange(e) {
+    this.setState({
+      email: e.target.value,
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <InfoForm
+          handleNameChange={this.handleNameChange}
+          handleEmailChange={this.handleEmailChange}
+        />
+        <EducationForm
+          remove={this.props.remove}
+          onNameChange={this.props.onNameChange}
+          onDegreeChange={this.props.onDegreeChange}
+          onStartChange={this.props.onStartChange}
+          onEndChange={this.props.onEndChange}
+          educations={this.props.edus}
+          addNewEdu={this.props.addNewEdu}
+        />
+        <JobsForm />
+        <button>save</button>
+      </div>
+    );
+  }
+}
+export default CVForm;
