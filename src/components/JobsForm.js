@@ -8,7 +8,7 @@ class JobsForm extends React.Component {
     this.state = {
       items: [],
     };
-    this.AddNewEdu = this.AddNewEdu.bind(this);
+    this.AddNewJob = this.AddNewJob.bind(this);
     this.remove = this.remove.bind(this);
     this.onNameChange = this.onNameChange.bind(this);
     this.onRoleChange = this.onRoleChange.bind(this);
@@ -16,13 +16,13 @@ class JobsForm extends React.Component {
     this.onEndChange = this.onEndChange.bind(this);
   }
 
-  AddNewEdu() {
+  AddNewJob() {
     const newId = uniqid();
     const newItem = {
       Role: "",
-      location: "",
-      yearOfStart: "",
-      yearOfEnd: "",
+      name: "",
+      start: "",
+      end: "",
       id: newId,
       onRemove: this.remove,
     };
@@ -78,21 +78,21 @@ class JobsForm extends React.Component {
       <div>
         <h2>Jobs experience</h2>
         <div>
-          {this.state.items.map((x) => {
+          {this.props.jobs.map((x) => {
             return (
               <JobsInput
                 key={x.id}
                 onRemove={x.onRemove}
                 id={x.id}
-                onNameChange={this.onNameChange}
-                onRoleChange={this.onRoleChange}
-                onStartChange={this.onStartChange}
-                onEndChange={this.onEndChange}
+                onNameChange={this.props.onNameChange}
+                onRoleChange={this.props.onRoleChange}
+                onStartChange={this.props.onStartChange}
+                onEndChange={this.props.onEndChange}
               />
             );
           })}
         </div>
-        <button onClick={this.AddNewEdu}>Add new</button>
+        <button onClick={this.props.AddNewJob}>Add new</button>
       </div>
     );
   }

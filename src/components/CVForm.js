@@ -43,7 +43,15 @@ class CVForm extends React.Component {
           educations={this.props.edus}
           addNewEdu={this.props.addNewEdu}
         />
-        <JobsForm />
+        <JobsForm
+          remove={this.props.removeJob}
+          onNameChange={this.props.onNameChangeJob}
+          onRoleChange={this.props.onRoleChangeJob}
+          onStartChange={this.props.onStartChangeJob}
+          onEndChange={this.props.onEndChangeJob}
+          AddNewJob={this.props.AddNewJob}
+          jobs={this.props.jobs}
+        />
         <button>save</button>
       </div>
     );

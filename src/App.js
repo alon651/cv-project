@@ -41,7 +41,6 @@ class App extends React.Component {
     this.setState({ edus: this.state.edus.filter((x) => x.id !== id) });
   }
   onNameChangeEdu(id, e) {
-    console.log(this.state);
     this.setState({
       edus: this.state.edus.map((obj) => {
         if (obj.id === id) {
@@ -52,7 +51,6 @@ class App extends React.Component {
     });
   }
   onDegreeChangeEdu(id, e) {
-    console.log(this.state);
     this.setState({
       edus: this.state.edus.map((obj) => {
         if (obj.id === id) {
@@ -83,7 +81,6 @@ class App extends React.Component {
     });
   }
   onNameChangeJob(id, e) {
-    console.log(this.state);
     this.setState({
       jobs: this.state.jobs.map((obj) => {
         if (obj.id === id) {
@@ -94,7 +91,6 @@ class App extends React.Component {
     });
   }
   onRoleChangeJob(id, e) {
-    console.log(this.state);
     this.setState({
       jobs: this.state.jobs.map((obj) => {
         if (obj.id === id) {
@@ -139,7 +135,7 @@ class App extends React.Component {
     });
   }
   removeJob(id) {
-    this.setState({ edus: this.state.edus.filter((x) => x.id !== id) });
+    this.setState({ jobs: this.state.jobs.filter((x) => x.id !== id) });
   }
   render() {
     return (
@@ -154,6 +150,12 @@ class App extends React.Component {
           edus={this.state.edus}
           addNewEdu={this.AddNewEdu}
           onNameChangeJob={this.onNameChangeJob}
+          onRoleChangeJob={this.onRoleChangeJob}
+          onStartChangeJob={this.onStartChangeJob}
+          onEndChangeJob={this.onEndChangeJob}
+          removeJob={this.removeJob}
+          AddNewJob={this.AddNewJob}
+          jobs={this.state.jobs}
         />
       </div>
     );
