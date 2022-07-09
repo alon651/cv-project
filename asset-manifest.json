@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/cv-project/static/js/main.c1bcea84.js",
+    "main.js": "/cv-project/static/js/main.d63d488f.js",
     "index.html": "/cv-project/index.html",
-    "main.c1bcea84.js.map": "/cv-project/static/js/main.c1bcea84.js.map"
+    "main.d63d488f.js.map": "/cv-project/static/js/main.d63d488f.js.map"
   },
   "entrypoints": [
-    "static/js/main.c1bcea84.js"
+    "static/js/main.d63d488f.js"
   ]
 }
