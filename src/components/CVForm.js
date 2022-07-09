@@ -20,11 +20,13 @@ class CVForm extends React.Component {
     this.setState({
       name: e.target.value,
     });
+    this.props.updateName(e);
   }
   handleEmailChange(e) {
     this.setState({
       email: e.target.value,
     });
+    this.props.onEmailChange(e);
   }
 
   render() {
@@ -52,7 +54,6 @@ class CVForm extends React.Component {
           AddNewJob={this.props.AddNewJob}
           jobs={this.props.jobs}
         />
-        <button>save</button>
       </div>
     );
   }
