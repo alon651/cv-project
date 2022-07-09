@@ -40,22 +40,22 @@ class JobsInput extends React.Component {
         <input
           onChange={this.onNameChange}
           placeholder="company name"
-          value={this.state.name}
+          value={this.props.self.name}
         ></input>
         <input
           onChange={this.onRoleChange}
           placeholder="role"
-          value={this.state.role}
+          value={this.props.self.role}
         ></input>
         <input
           onChange={this.onStartChange}
           placeholder="start date"
-          value={this.state.start}
+          value={this.props.self.start}
         ></input>
         <input
           onChange={this.onEndChange}
           placeholder="end date"
-          value={this.state.end}
+          value={this.props.self.end}
         ></input>
         <button onClick={() => this.props.onRemove(this.props.id)}>
           delete

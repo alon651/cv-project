@@ -10,8 +10,14 @@ class InfoForm extends React.Component {
     return (
       <div>
         <h2>Personal Information</h2>
-        <NameForm handleChange={this.props.handleNameChange} />
-        <EmailForm handleChange={this.props.handleEmailChange} />
+        <NameForm
+          handleChange={this.props.handleNameChange}
+          name={this.props.name}
+        />
+        <EmailForm
+          handleChange={this.props.handleEmailChange}
+          email={this.props.email}
+        />
       </div>
     );
   }

@@ -40,22 +40,22 @@ class EducationInput extends React.Component {
         <input
           onChange={this.onNameChange}
           placeholder="school name"
-          value={this.state.name}
+          value={this.props.self.name}
         ></input>
         <input
           onChange={this.onDegreeChange}
           placeholder="degree"
-          value={this.state.degree}
+          value={this.props.self.degree}
         ></input>
         <input
           onChange={this.onStartChange}
           placeholder="start date"
-          value={this.state.start}
+          value={this.props.self.start}
         ></input>
         <input
           onChange={this.onEndChange}
           placeholder="end date"
-          value={this.state.end}
+          value={this.props.self.end}
         ></input>
         <button onClick={() => this.props.onRemove(this.props.id)}>
           delete

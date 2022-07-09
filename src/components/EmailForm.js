@@ -20,7 +20,7 @@ class EmailForm extends React.Component {
         <label htmlFor="Email">Email: </label>
         <input
           type="text"
-          value={this.state.email}
+          value={this.props.email}
           onChange={this.handleChange}
         ></input>
       </div>

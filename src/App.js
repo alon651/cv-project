@@ -29,7 +29,6 @@ class App extends React.Component {
     this.Display = true;
     this.saveClick = this.saveClick.bind(this);
     this.editClick = this.editClick.bind(this);
-
     this.updateEmail = this.updateEmail.bind(this);
     this.updateName = this.updateName.bind(this);
   }
@@ -193,6 +192,8 @@ class App extends React.Component {
               removeJob={this.removeJob}
               AddNewJob={this.AddNewJob}
               jobs={this.state.jobs}
+              email={this.state.email}
+              name={this.state.name}
             />
             <button onClick={this.saveClick}>save</button>
           </div>

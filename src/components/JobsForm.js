@@ -88,6 +88,7 @@ class JobsForm extends React.Component {
                 onRoleChange={this.props.onRoleChange}
                 onStartChange={this.props.onStartChange}
                 onEndChange={this.props.onEndChange}
+                self={x}
               />
             );
           })}

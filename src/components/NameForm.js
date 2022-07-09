@@ -18,7 +18,7 @@ class NameForm extends React.Component {
         <label htmlFor="fullName">full name: </label>
         <input
           type="text"
-          value={this.state.name}
+          value={this.props.name}
           onChange={this.handleChange}
         ></input>
       </div>

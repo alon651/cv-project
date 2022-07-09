@@ -35,6 +35,8 @@ class CVForm extends React.Component {
         <InfoForm
           handleNameChange={this.handleNameChange}
           handleEmailChange={this.handleEmailChange}
+          email={this.props.email}
+          name={this.props.name}
         />
         <EducationForm
           remove={this.props.remove}

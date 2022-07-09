@@ -88,6 +88,7 @@ class EducationForm extends React.Component {
                 onDegreeChange={this.props.onDegreeChange}
                 onStartChange={this.props.onStartChange}
                 onEndChange={this.props.onEndChange}
+                self={x}
               />
             );
           })}
