@@ -170,7 +170,6 @@ class App extends React.Component {
               jobs={this.state.jobs}
             />
             <button onClick={this.editClick}>edit</button>
-            <button onClick={this.downloadClick}>download</button>
           </div>
         ) : (
           <div>
